@@ -1,0 +1,11 @@
+numpy
+matplotlib
+pandas
+seaborn
+nltk
+gensim
+tqdm
+tensorflow
+scikit-learn
+Flask
+streamlit
