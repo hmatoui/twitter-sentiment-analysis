@@ -85,7 +85,7 @@ history = model.fit(
     X_train, y_train,
     validation_data=(X_val, y_val),
     epochs=10,
-    batch_size=32,
+    batch_size=64,
     verbose=1,
 )
 logging.info("Training completed successfully.")
