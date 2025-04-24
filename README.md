@@ -2,7 +2,11 @@
 
 ## Overview
 
-This project focuses on building a Twitter Sentiment Analysis system that predicts sentiment (positive, neutral, negative) from tweets or product reviews. It leverages data preprocessing, training deep learning models, and deploying the system via Docker for use on different systems or platforms such as Google Cloud Platform (GCP).
+This project focuses on building a Twitter Sentiment Analysis system that predicts sentiment (positive, neutral, negative) from tweets or product reviews. It leverages data preprocessing, training deep learning models via Docker on Google Cloud Platform (GCP).
+
+The trained model is then deployed in the Twitter Sentiment Analysis App shown below for real-time sentiment analysis.
+
+![Infrence App](assets/app.gif)
 
 ---
 
@@ -225,3 +229,15 @@ To stop a running container:
 - Use GPU-enabled hardware for faster training if possible.
 
 - Update dependencies in `requirements.txt` as needed.
+
+## Twitter Sentiment Analysis App
+
+This app is a Twitter Sentiment Analysis application that predicts the sentiment (positive, neutral, or negative) of tweets or product reviews. The application was developed using a Flask web framework and integrates a PyTorch model for real-time sentiment analysis.
+
+### 1. App Interface
+
+The app provides an interface where users can input a tweet or review. The input is then processed by the model to predict its sentiment. The result is displayed on the same page immediately after submission.
+
+### 2. Model Inference
+
+The trained sentiment analysis model is deployed in the Flask application, making it accessible via the web interface. Users can submit a tweet or review, and the model processes the input text to display the predicted sentiment along with the associated probability.

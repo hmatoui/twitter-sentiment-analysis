@@ -2,14 +2,15 @@ from flask import Flask, request, render_template, jsonify
 import tensorflow as tf
 import numpy as np
 import pickle
+from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import torch
 
 app = Flask(__name__)
 
-# Load the trained model and tokenizer
-model = tf.keras.models.load_model('../models/sentiment/sentiment_model.h5')
-with open('../models/tokenizer/tokenizer.pkl', 'rb') as f:
-    tokenizer = pickle.load(f)
+# Load the pretrained model
+model_name_path = "../models/pretrained/"
+model = AutoModelForSequenceClassification.from_pretrained(model_name_path)
+tokenizer = AutoTokenizer.from_pretrained(model_name_path)
 
 @app.route('/predict', methods=['POST'])
 def predict(tweet):

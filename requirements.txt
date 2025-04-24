@@ -8,3 +8,5 @@ tqdm
 tensorflow
 scikit-learn
 Flask
+torch
+transformers
