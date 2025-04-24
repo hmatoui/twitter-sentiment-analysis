@@ -8,4 +8,3 @@ tqdm
 tensorflow
 scikit-learn
 Flask
-streamlit
